@@ -6,6 +6,16 @@ app.get("/", function (req, res) {
     res.send("<h1>my app on heroku! - jeszcze jedna mała zmianaa</h1>")
 })
 
+app.get("/data", function (req, res) {
+    const data = {
+      imie: "Oskar",
+      nazwisko: "Marciniak",
+      klasa: "3i1",
+      grupa: "b",
+    };
+    res.send(data);
+  });
+
 app.listen(PORT, function () {
     console.log("start serwera na porcie " + PORT)
 })
